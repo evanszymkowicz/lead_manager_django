@@ -9,3 +9,6 @@ Technologies used
 -Django Rest framework
 -Django Rest Knox
 -Postman
+-React
+-Babel
+-Webpack
