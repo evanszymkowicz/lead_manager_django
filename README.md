@@ -8,3 +8,4 @@ Technologies used
 -Django
 -Django Rest framework
 -Django Rest Knox
+-Postman
