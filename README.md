@@ -4,7 +4,7 @@
 
 Started over.
 
-Technologies used:
+Technologies used
 -Django
 -Django Rest framework
 -Django Rest Knox
