@@ -14,3 +14,5 @@ Technologies used
 -Webpack
 
 Application-level state and user authentication provided thru Redux
+
+`npm run dev` didn't work.
