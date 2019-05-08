@@ -12,3 +12,5 @@ Technologies used
 -React
 -Babel
 -Webpack
+
+Application-level state and user authentication provided thru Redux
