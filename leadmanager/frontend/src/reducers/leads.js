@@ -13,7 +13,13 @@ export default function(state = initialState, action) {
 				//leads sent as a payload in the action
 				...state,
 				leads: action.payload
-			}
+			};
+		case DELETE_LEAD:
+			return {
+				...state,
+				leads: state.leads.filter(lead => lead.id !==
+				action.payload)
+		};
 		default:
 			return state;
 	}

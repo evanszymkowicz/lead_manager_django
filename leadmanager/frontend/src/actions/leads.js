@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_LEADS } from './types';
+import { GET_LEADS, DELETE_LEAD } from './types';
 
 // GET leads action method
 
@@ -19,4 +19,17 @@ export const getLeads = () => dispatch => {
         payload: res.data
       });
     }).catch(err => console.log(err));
-}
+};
+
+//Deleting a lead
+export const deleteLead = (id) => dispatch => {
+	axios
+		.get(`api/leads/${id}/`)
+		.then(res => {
+			dispatch({
+				type: DELETE_LEADS,
+				payload: res.data
+			});
+		})
+		.catch(err => console.log(err));
+};
