@@ -11,7 +11,7 @@ export const getLeads = () => dispatch => {
 
 	//this axios func will fire the leads.js file in action
 	axios
-    .delete(`/api/leads/${id}/`, tokenConfig(getState))
+    .delete(`/api/leads/${id}/`), tokenConfig(getState))
     .then(res => {
       dispatch(createMessage({ deleteLead: "Lead Deleted" }));
       dispatch({
