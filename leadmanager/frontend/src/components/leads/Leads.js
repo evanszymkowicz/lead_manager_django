@@ -5,8 +5,10 @@ import { getLeads } from '../../actions/leads';
 
 export class Leads extends Component {
 	static propTypes = {
-		leads: PropTypes.array.isRequired
-	}
+		leads: PropTypes.array.isRequired,
+		getLeads: PropTypes.func.isRequired, //this adds custom functions as a prop
+		deleteLeads: PropTypes.func.isRequired //same deal, just delete functionality
+	};
 
 componentDidMount() {
 	this.props.getLeads();
