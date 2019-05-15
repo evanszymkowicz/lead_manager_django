@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { addLead } from '../../actions/leads';
 
 export class Form extends Component {
   state = {
@@ -6,6 +9,19 @@ export class Form extends Component {
     email: '',
     message: ''
   }
+
+  static PropTypes = {
+    addLead: PropTypes.func.isRequired
+  };
+
+  onChange = e => this.setState({ [e.target.name]: e.target.value }); //this pulls the name="name" value
+
+  onSubmit = e => {
+    e.preventDefault(); //I think this helps load state
+    const { name, email, message } = this.state; //default null established at the bottom
+    const { name, email, message }; //this should make sure that we're getting the right data
+    this.props.addLead(lead)
+  };
 
   //bootrsrapped from somewhere else
   render() {
@@ -54,3 +70,5 @@ export class Form extends Component {
     );
   }
 }
+
+export form connect(null, {addLead })(Form);
